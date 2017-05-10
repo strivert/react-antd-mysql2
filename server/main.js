@@ -24,18 +24,12 @@ const connection = mysql.createConnection({host: process.env.DBHOST,
 
 app.use('/', express.static( path.join(__dirname, './../public') ));
 
-app.use('/api', api);
 app.use(bodyParser.json());
 
 /* support client-side routing */
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './../public/index.html'));
 });
-
-
-app.get('/hello', (req,res)=>{
-	return res.send('Hellsvvv');
-})
 
 app.post('/test', function(request, response) {
 
