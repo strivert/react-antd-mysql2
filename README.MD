@@ -1,4 +1,4 @@
-# React, Redux, Antd design, Myslq2, NodeServer API
+# React, Redux, Antd design, Mysql2, NodeServer API
 
 ```
 npm run build

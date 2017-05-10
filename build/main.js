@@ -50,16 +50,11 @@ var connection = _mysql2.default.createConnection({ host: process.env.DBHOST,
 
 app.use('/', _express2.default.static(_path2.default.join(__dirname, './../public')));
 
-app.use('/api', _routes2.default);
 app.use(_bodyParser2.default.json());
 
 /* support client-side routing */
 app.get('*', function (req, res) {
     res.sendFile(_path2.default.resolve(__dirname, './../public/index.html'));
-});
-
-app.get('/hello', function (req, res) {
-    return res.send('Hellsvvv');
 });
 
 app.post('/test', function (request, response) {
